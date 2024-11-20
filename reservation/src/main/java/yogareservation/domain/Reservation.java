@@ -37,11 +37,13 @@ public class Reservation {
         ReservePlaced reservePlaced = new ReservePlaced(this);
         reservePlaced.publishAfterCommit();
 
+        /*
         ReserveCanceled reserveCanceled = new ReserveCanceled(this);
         reserveCanceled.publishAfterCommit();
 
         StatusUpdated statusUpdated = new StatusUpdated(this);
         statusUpdated.publishAfterCommit();
+        */
     }
 
     public static ReservationRepository repository() {

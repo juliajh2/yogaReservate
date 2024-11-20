@@ -62,15 +62,15 @@ public class YogaClass {
     //<<< Clean Arch / Port Method
     public static void increaseReserveSeat(ReservePlaced reservePlaced) {
         //implement business logic here:
-        repository().findById(Long.parseLong(reservePlaced.getClassId())).ifPresent(yogaClass->{
+        repository().findById(Long.valueOf(reservePlaced.getClassId())).ifPresent(yogaClass->{
             
             //예약가능
             if(yogaClass.getReservedSeat()<yogaClass.getMaxSeat()){
                 yogaClass.setReservedSeat(yogaClass.getReservedSeat()+1);
                 repository().save(yogaClass);
 
-                SeatNumDecreased seatNumDecreased = new SeatNumDecreased(yogaClass);
-                seatNumDecreased.publishAfterCommit();
+                SeatNumIncreased seatNumIncreased = new SeatNumIncreased(yogaClass);
+                seatNumIncreased.publishAfterCommit();
             }
             //예약불가능
             else{
@@ -111,12 +111,12 @@ public class YogaClass {
     public static void decreaseReserveSeat(ReserveCanceled reserveCanceled) {
         //implement business logic here:
 
-        repository().findById(Long.parseLong(reserveCanceled.getClassId())).ifPresent(yogaClass->{
+        repository().findById(Long.valueOf(reserveCanceled.getClassId())).ifPresent(yogaClass->{
             
             repository().save(yogaClass);
 
-            SeatNumIncreased seatNumIncreased = new SeatNumIncreased(yogaClass);
-            seatNumIncreased.publishAfterCommit();
+            SeatNumDecreased seatNumDecreased = new SeatNumDecreased(yogaClass);
+            seatNumDecreased.publishAfterCommit();
 
          });
         /** Example 1:  new item 
