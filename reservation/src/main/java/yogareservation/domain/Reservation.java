@@ -54,6 +54,10 @@ public class Reservation {
     //<<< Clean Arch / Port Method
     public static void updateStatus(SeatNumDecreased seatNumDecreased) {
         //implement business logic here:
+        StatusUpdated statusUpdated = new StatusUpdated();
+        statusUpdated.setClassId(seatNumDecreased.getClassId());
+        statusUpdated.setStatus("reserved");
+        statusUpdated.publishAfterCommit();
 
         /** Example 1:  new item 
         Reservation reservation = new Reservation();
@@ -82,7 +86,10 @@ public class Reservation {
     //<<< Clean Arch / Port Method
     public static void updateStatus(NoSeatsLeft noSeatsLeft) {
         //implement business logic here:
-
+        StatusUpdated statusUpdated = new StatusUpdated();
+        statusUpdated.setClassId(noSeatsLeft.getClassId());
+        statusUpdated.setStatus("not available");
+        statusUpdated.publishAfterCommit();
         /** Example 1:  new item 
         Reservation reservation = new Reservation();
         repository().save(reservation);
@@ -110,7 +117,11 @@ public class Reservation {
     //<<< Clean Arch / Port Method
     public static void updateStatus(SeatNumIncreased seatNumIncreased) {
         //implement business logic here:
-
+        StatusUpdated statusUpdated = new StatusUpdated();
+        statusUpdated.setClassId(seatNumIncreased.getClassId());
+        statusUpdated.setStatus("canceld");
+        statusUpdated.publishAfterCommit();
+        
         /** Example 1:  new item 
         Reservation reservation = new Reservation();
         repository().save(reservation);
