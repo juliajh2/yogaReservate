@@ -1,7 +1,7 @@
 # 
 
 ## Model
-www.msaez.io/#/courses/cna-full/15959a90-8edc-11ef-99e7-5be4c630405e/event-design
+www.msaez.io/#/188553205/storming/1
 
 ## Before Running Services
 ### Make sure there is a Kafka server running

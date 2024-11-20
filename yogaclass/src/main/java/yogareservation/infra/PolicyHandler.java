@@ -27,32 +27,34 @@ public class PolicyHandler {
         value = KafkaProcessor.INPUT,
         condition = "headers['type']=='ReservePlaced'"
     )
-    public void wheneverReservePlaced_DecreaseSeat(
+    public void wheneverReservePlaced_IncreaseReserveSeat(
         @Payload ReservePlaced reservePlaced
     ) {
         ReservePlaced event = reservePlaced;
         System.out.println(
-            "\n\n##### listener DecreaseSeat : " + reservePlaced + "\n\n"
+            "\n\n##### listener IncreaseReserveSeat : " + reservePlaced + "\n\n"
         );
 
         // Sample Logic //
-        YogaClass.decreaseSeat(event);
+        YogaClass.increaseReserveSeat(event);
     }
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
         condition = "headers['type']=='ReserveCanceled'"
     )
-    public void wheneverReserveCanceled_IncreaseSeat(
+    public void wheneverReserveCanceled_DecreaseReserveSeat(
         @Payload ReserveCanceled reserveCanceled
     ) {
         ReserveCanceled event = reserveCanceled;
         System.out.println(
-            "\n\n##### listener IncreaseSeat : " + reserveCanceled + "\n\n"
+            "\n\n##### listener DecreaseReserveSeat : " +
+            reserveCanceled +
+            "\n\n"
         );
 
         // Sample Logic //
-        YogaClass.increaseSeat(event);
+        YogaClass.decreaseReserveSeat(event);
     }
 }
 //>>> Clean Arch / Inbound Adaptor
