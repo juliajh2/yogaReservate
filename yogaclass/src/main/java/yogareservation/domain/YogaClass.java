@@ -60,17 +60,17 @@ public class YogaClass {
     }
 
     //<<< Clean Arch / Port Method
-    public static void decreaseSeat(ReservePlaced reservePlaced) {
+    public static void increaseReserveSeat(ReservePlaced reservePlaced) {
         //implement business logic here:
 
         /** Example 1:  new item 
         YogaClass yogaClass = new YogaClass();
         repository().save(yogaClass);
 
-        SeatNumDecreased seatNumDecreased = new SeatNumDecreased(yogaClass);
-        seatNumDecreased.publishAfterCommit();
         NoSeatsLeft noSeatsLeft = new NoSeatsLeft(yogaClass);
         noSeatsLeft.publishAfterCommit();
+        SeatNumIncreased seatNumIncreased = new SeatNumIncreased(yogaClass);
+        seatNumIncreased.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
@@ -80,10 +80,10 @@ public class YogaClass {
             yogaClass // do something
             repository().save(yogaClass);
 
-            SeatNumDecreased seatNumDecreased = new SeatNumDecreased(yogaClass);
-            seatNumDecreased.publishAfterCommit();
             NoSeatsLeft noSeatsLeft = new NoSeatsLeft(yogaClass);
             noSeatsLeft.publishAfterCommit();
+            SeatNumIncreased seatNumIncreased = new SeatNumIncreased(yogaClass);
+            seatNumIncreased.publishAfterCommit();
 
          });
         */
@@ -92,15 +92,15 @@ public class YogaClass {
 
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
-    public static void increaseSeat(ReserveCanceled reserveCanceled) {
+    public static void decreaseReserveSeat(ReserveCanceled reserveCanceled) {
         //implement business logic here:
 
         /** Example 1:  new item 
         YogaClass yogaClass = new YogaClass();
         repository().save(yogaClass);
 
-        SeatNumIncreased seatNumIncreased = new SeatNumIncreased(yogaClass);
-        seatNumIncreased.publishAfterCommit();
+        SeatNumDecreased seatNumDecreased = new SeatNumDecreased(yogaClass);
+        seatNumDecreased.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
@@ -110,8 +110,8 @@ public class YogaClass {
             yogaClass // do something
             repository().save(yogaClass);
 
-            SeatNumIncreased seatNumIncreased = new SeatNumIncreased(yogaClass);
-            seatNumIncreased.publishAfterCommit();
+            SeatNumDecreased seatNumDecreased = new SeatNumDecreased(yogaClass);
+            seatNumDecreased.publishAfterCommit();
 
          });
         */
