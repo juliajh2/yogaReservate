@@ -51,7 +51,20 @@
 ![image](https://github.com/user-attachments/assets/158721b6-ebdf-4426-9fa4-cea929e379c6)
 
 ### 분산 데이터 프로젝션 - CQRS
+![image](https://github.com/user-attachments/assets/a1608540-50eb-4618-8611-c629460e552b)
 
 ## 클라우드 배포 ☁
+- azure vm 가상머신 접속
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/3a0be268-738f-4cc1-98bc-158f3346c436/aa5ddd12-5be9-4d34-ae36-2f5e312a2a67/image.png)
+- Jenkins Pipeline 생성
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/3a0be268-738f-4cc1-98bc-158f3346c436/825d0132-ad73-4236-bc07-5c7b68e5086c/image.png)
+- Jenkinsfile 변경
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/3a0be268-738f-4cc1-98bc-158f3346c436/e437f6ec-bc01-4212-ad75-3ad861d91e11/image.png)
 
 ## 컨테이너 🚦
+### 컨테이너 자동확장 - HPA
+### 컨테이너로부터 환경분리 - ConfigMap
+### 클라우드스토리지 활용 - PVC
+### 무정지배포 - Rediness Probe
+### 서비스 메쉬 응용 - Mesh
+### 통합 모니터링 - Loggregation/Monitoring
