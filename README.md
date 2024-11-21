@@ -64,7 +64,7 @@
 
 - Webhook 설정
 ![image](https://github.com/user-attachments/assets/11dc48cd-f862-4a7a-a212-5dd307c1346b)
-ㅅㄷㄴㅅ
+
 ## 컨테이너 🚦
 ### 컨테이너 자동확장 - HPA
 ### 컨테이너로부터 환경분리 - ConfigMap
