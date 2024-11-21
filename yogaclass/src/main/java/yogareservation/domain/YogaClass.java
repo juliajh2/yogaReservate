@@ -67,10 +67,10 @@ public class YogaClass {
         YogaClass yogaClass = new YogaClass();
         repository().save(yogaClass);
 
-        NoSeatsLeft noSeatsLeft = new NoSeatsLeft(yogaClass);
-        noSeatsLeft.publishAfterCommit();
         SeatNumIncreased seatNumIncreased = new SeatNumIncreased(yogaClass);
         seatNumIncreased.publishAfterCommit();
+        NoSeatsLeft noSeatsLeft = new NoSeatsLeft(yogaClass);
+        noSeatsLeft.publishAfterCommit();
         */
 
         /** Example 2:  finding and process
@@ -80,10 +80,10 @@ public class YogaClass {
             yogaClass // do something
             repository().save(yogaClass);
 
-            NoSeatsLeft noSeatsLeft = new NoSeatsLeft(yogaClass);
-            noSeatsLeft.publishAfterCommit();
             SeatNumIncreased seatNumIncreased = new SeatNumIncreased(yogaClass);
             seatNumIncreased.publishAfterCommit();
+            NoSeatsLeft noSeatsLeft = new NoSeatsLeft(yogaClass);
+            noSeatsLeft.publishAfterCommit();
 
          });
         */
