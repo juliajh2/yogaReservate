@@ -25,6 +25,12 @@
 
 ## MSA 개발 💻
 ### 분산트랜잭션-Saga
+classId="2"인 yogaClass 생성
+![image](https://github.com/user-attachments/assets/82f20c3c-04d3-4c9e-87bc-64bc79f7105f)
+classId="2"인 yogaClass 예약
+![image](https://github.com/user-attachments/assets/baa2aaf0-3af7-41e8-9b42-33054c769a63)
+classId="2"인 yogaClass의 reservedSeat + 1
+![image](https://github.com/user-attachments/assets/31a54efd-13b9-415f-8931-8a247627778e)
 
 ### 보상처리 - Compensation
 ### 단일 진입점 - Gateway
