@@ -65,8 +65,8 @@ public class YogaClass {
         repository().findById(Long.valueOf(reservePlaced.getClassId())).ifPresent(yogaClass->{
             
             //예약가능
-            if(yogaClass.getReservedSeat()<yogaClass.getMaxSeat()){
-                yogaClass.setReservedSeat(yogaClass.getReservedSeat()+1);
+            if(yogaClass.getReservedSeat() < yogaClass.getMaxSeat()){
+                yogaClass.setReservedSeat(yogaClass.getReservedSeat() + 1);
                 repository().save(yogaClass);
 
                 SeatNumIncreased seatNumIncreased = new SeatNumIncreased(yogaClass);
