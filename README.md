@@ -25,12 +25,47 @@
 
 ## MSA 개발 💻
 ### 분산트랜잭션-Saga
-classId="2"인 yogaClass 생성
-![image](https://github.com/user-attachments/assets/82f20c3c-04d3-4c9e-87bc-64bc79f7105f)
-classId="2"인 yogaClass 예약
-![image](https://github.com/user-attachments/assets/baa2aaf0-3af7-41e8-9b42-33054c769a63)
-classId="2"인 yogaClass의 reservedSeat + 1
-![image](https://github.com/user-attachments/assets/31a54efd-13b9-415f-8931-8a247627778e)
+- classId=2인 yogaClass 생성. 최대 예약 인원 2명.
+![image](https://github.com/user-attachments/assets/8b2ad392-1521-4b4e-a665-4a551b90d55b)
+
+- userId=11이 classId=2인 yogaClass 예약
+![image](https://github.com/user-attachments/assets/a1d26ed2-9cad-4915-a699-b48e6616de9f)
+
+- classId=2인 yogaClass의 reservedSeat + 1
+![image](https://github.com/user-attachments/assets/1b5ec3e6-3d5f-4d74-987e-7425ad173cd7)
+
+- userId=12이 classId=2인 yogaClass 예약
+- classId=2인 yogaClass의 reservedSeat + 1
+![image](https://github.com/user-attachments/assets/423f4837-5f47-4e35-b4cf-f21d361bfcb2)
+
+- userId=13이 classId=2인 yogaClass 예약
+![image](https://github.com/user-attachments/assets/4f8aa680-553c-45b7-80b8-62bdb4ba2a3b)
+
+- 수강 인원 더 올라가지 않음.
+'''
+public static void increaseReserveSeat(ReservePlaced reservePlaced) {
+        
+        //implement business logic here:
+        repository().findById(Long.valueOf(reservePlaced.getClassId())).ifPresent(yogaClass->{
+            
+            //예약가능
+            if(yogaClass.getReservedSeat() < yogaClass.getMaxSeat()){
+                yogaClass.setReservedSeat(yogaClass.getReservedSeat() + 1);
+                repository().save(yogaClass);
+
+                SeatNumIncreased seatNumIncreased = new SeatNumIncreased(yogaClass);
+                seatNumIncreased.publishAfterCommit();
+            }
+            //예약불가능
+            else{
+                NoSeatsLeft noSeatsLeft = new NoSeatsLeft(yogaClass);
+                noSeatsLeft.publishAfterCommit();
+            }
+
+         });
+  }
+'''
+![image](https://github.com/user-attachments/assets/f7a331af-dd7a-403f-be1e-6e5d6f50ef2a)
 
 ### 보상처리 - Compensation
 ### 단일 진입점 - Gateway
