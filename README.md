@@ -14,11 +14,9 @@
 - 사용자가 수업 예약을 완료했을 때, 수업 예약 완료 알림을 보낸다.
 - 사용자가 수업 예약을 취소 했을 때, 수업 예약 취소 알림을 보낸다.
 4. Mypage
-사용자가 예약한 수업을 보여준다.
+- 사용자가 예약한 수업을 보여준다.
 
 ## MSA 아키텍처 구성도
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/3a0be268-738f-4cc1-98bc-158f3346c436/038f6027-7d14-4600-a469-bc71134211d7/image.png)
-
+![image](https://github.com/user-attachments/assets/61d2eb90-d154-4506-8fce-fe066591e5ef)
 ## 이벤트 스토밍
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/3a0be268-738f-4cc1-98bc-158f3346c436/5bf5044c-177c-425b-b5f2-5329481e1c33/image.png)
-
+![image](https://github.com/user-attachments/assets/10deb8b8-5952-4b53-8fbf-ee62253f77e6)
