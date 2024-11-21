@@ -18,16 +18,16 @@ public class MypageViewHandler {
     private MypageRepository mypageRepository;
 
     @StreamListener(KafkaProcessor.INPUT)
-    public void whenReservePlaced_then_CREATE_1(
-        @Payload ReservePlaced reservePlaced
+    public void whenSeatNumIncreased_then_CREATE_1(
+        @Payload SeatNumIncreased seatNumIncreased
     ) {
         try {
-            if (!reservePlaced.validate()) return;
+            if (!seatNumIncreased.validate()) return;
 
             // view 객체 생성
             Mypage mypage = new Mypage();
             // view 객체에 이벤트의 Value 를 set 함
-            mypage.setClassId(reservePlaced.getClassId());
+            mypage.setClassId(seatNumIncreased.getClassId());
             mypage.setReserveStatus("reserved");
             // view 레파지 토리에 save
             mypageRepository.save(mypage);
