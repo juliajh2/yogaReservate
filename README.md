@@ -11,7 +11,6 @@
 - 사용자가 요가 수업을 예약하면 수업 인원 수가 증가한다.
 - 사용자가 선택한 날이 수업 최대 인원 충원했으면 예약 불가능하다.
 3. Notification
-- 예약한 수업일자에 알림을 보낸다.
 - 사용자가 수업 예약을 완료했을 때, 수업 예약 완료 알림을 보낸다.
 - 사용자가 수업 예약을 취소 했을 때, 수업 예약 취소 알림을 보낸다.
 4. Mypage
@@ -55,11 +54,16 @@
 
 ## 클라우드 배포 ☁
 - azure vm 가상머신 접속
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/3a0be268-738f-4cc1-98bc-158f3346c436/aa5ddd12-5be9-4d34-ae36-2f5e312a2a67/image.png)
+![image](https://github.com/user-attachments/assets/a45aa09b-987e-4e90-a17b-14bb753b1528)
+
 - Jenkins Pipeline 생성
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/3a0be268-738f-4cc1-98bc-158f3346c436/825d0132-ad73-4236-bc07-5c7b68e5086c/image.png)
+![image](https://github.com/user-attachments/assets/0051deab-4c2b-4d71-a2ed-469a49dbf0a3)
+
 - Jenkinsfile 변경
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/3a0be268-738f-4cc1-98bc-158f3346c436/e437f6ec-bc01-4212-ad75-3ad861d91e11/image.png)
+![image](https://github.com/user-attachments/assets/d942c42f-d1b5-4884-b33c-d503535c7de6)
+
+- Webhook 설정
+![image](https://github.com/user-attachments/assets/11dc48cd-f862-4a7a-a212-5dd307c1346b)
 
 ## 컨테이너 🚦
 ### 컨테이너 자동확장 - HPA
