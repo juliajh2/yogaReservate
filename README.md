@@ -1,90 +1,24 @@
-# 
+# 주제: 요가 수업 예약 서비스
+## 시나리오
+1. YogaClass
+- 관리자는 요가 수업 시간을 등록, 수정, 삭제할 수 있다.
+- 남은 자리가 없는 수업은 예약할 수 없다.
+2. Reservation
+- 사용자는 요가 수업을 예약할 수 있다.
+- 사용자가 요가 수업을 예약하면 수업 인원 수가 증가한다.
+- 사용자는 예약을 취소할 수 있다.
+- 사용자가 요가 수업을 예약하면 수업 인원 수가 증가한다.
+- 사용자가 선택한 날이 수업 최대 인원 충원했으면 예약 불가능하다.
+3. Notification
+- 예약한 수업일자에 알림을 보낸다.
+- 사용자가 수업 예약을 완료했을 때, 수업 예약 완료 알림을 보낸다.
+- 사용자가 수업 예약을 취소 했을 때, 수업 예약 취소 알림을 보낸다.
+4. Mypage
+사용자가 예약한 수업을 보여준다.
 
-## Model
-www.msaez.io/#/188553205/storming/1
+## MSA 아키텍처 구성도
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/3a0be268-738f-4cc1-98bc-158f3346c436/038f6027-7d14-4600-a469-bc71134211d7/image.png)
 
-## Before Running Services
-### Make sure there is a Kafka server running
-```
-cd kafka
-docker-compose up
-```
-- Check the Kafka messages:
-```
-cd infra
-docker-compose exec -it kafka /bin/bash
-cd /bin
-./kafka-console-consumer --bootstrap-server localhost:9092 --topic
-```
-
-## Run the backend micro-services
-See the README.md files inside the each microservices directory:
-
-- reservation
-- yogaclass
-- mypage
-- notification
-
-
-## Run API Gateway (Spring Gateway)
-```
-cd gateway
-mvn spring-boot:run
-```
-
-## Test by API
-- reservation
-```
- http :8088/reservations id="id" userId="userId" classId="classId" classDate="classDate" reserveId="reserveId" reserveDate="reserveDate" status="status" 
-```
-- yogaclass
-```
- http :8088/yogaClasses id="id" classId="classId" classDate="classDate" maxSeat="maxSeat" reservedSeat="reservedSeat" 
-```
-- mypage
-```
-```
-- notification
-```
-```
-
-
-## Run the frontend
-```
-cd frontend
-npm i
-npm run serve
-```
-
-## Test by UI
-Open a browser to localhost:8088
-
-## Required Utilities
-
-- httpie (alternative for curl / POSTMAN) and network utils
-```
-sudo apt-get update
-sudo apt-get install net-tools
-sudo apt install iputils-ping
-pip install httpie
-```
-
-- kubernetes utilities (kubectl)
-```
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
-```
-
-- aws cli (aws)
-```
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-unzip awscliv2.zip
-sudo ./aws/install
-```
-
-- eksctl 
-```
-curl --silent --location "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_$(uname -s)_amd64.tar.gz" | tar xz -C /tmp
-sudo mv /tmp/eksctl /usr/local/bin
-```
+## 이벤트 스토밍
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/3a0be268-738f-4cc1-98bc-158f3346c436/5bf5044c-177c-425b-b5f2-5329481e1c33/image.png)
 
