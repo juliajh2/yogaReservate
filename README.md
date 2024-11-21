@@ -64,7 +64,12 @@
 
 - Webhook 설정
 ![image](https://github.com/user-attachments/assets/11dc48cd-f862-4a7a-a212-5dd307c1346b)
-test
+
+- github에서 push 할 경우, trigger되어 Jenkins를 통해 배포
+![image](https://github.com/user-attachments/assets/3aa15057-cf9c-4bec-ae49-2912c2b0f37d)
+![image](https://github.com/user-attachments/assets/f6c3217a-776f-4552-887b-b5134d59803a)
+
+
 ## 컨테이너 🚦
 ### 컨테이너 자동확장 - HPA
 ### 컨테이너로부터 환경분리 - ConfigMap
