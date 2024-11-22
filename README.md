@@ -22,7 +22,7 @@
 - Microservices: Reservation, YogaClass, Notification, MyPage
 - Kafka: 메시지 브로커. 
 ## 이벤트 스토밍 ✨
-![image](https://github.com/user-attachments/assets/10deb8b8-5952-4b53-8fbf-ee62253f77e6)
+![image](https://github.com/user-attachments/assets/bd70ccf6-9e02-4e7f-af8b-0f94b780c9ec)
 
 ## MSA 개발 💻
 ### 분산트랜잭션-Saga
