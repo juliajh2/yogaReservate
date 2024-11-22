@@ -72,14 +72,39 @@
 
 ## 컨테이너 🚦
 ### 컨테이너 자동확장 - HPA
+- AutoScale 설정
 ![image](https://github.com/user-attachments/assets/c41fd4df-a7be-4787-9c46-710fc67e48b3)
+- 부하테스트<br>
 ![image](https://github.com/user-attachments/assets/7ad7f293-bacb-4e60-8da4-e8bc33c660a6)
+- pod 자동으로 증가<br>
 ![image](https://github.com/user-attachments/assets/58cf6205-1223-45f2-b1ad-087511a59708)
+- targets 증가<br>
 ![image](https://github.com/user-attachments/assets/81a64d64-6aff-4822-a52f-a119b134a024)
 
-
 ### 컨테이너로부터 환경분리 - ConfigMap
+- Config Map 생성<br>
+![image](https://github.com/user-attachments/assets/4bca90f3-feea-4b62-90aa-c73bc78d37e5)
+- deployment.yaml 변경
+![image](https://github.com/user-attachments/assets/eb68a8b5-ae58-470d-8e0d-5eb4d46b7f0b)
+- 환경변수 확인
+![image](https://github.com/user-attachments/assets/dbb401ec-f9b7-4a98-b301-27638463db86)
+
 ### 클라우드스토리지 활용 - PVC
+- volumeMounts 설정<br>
+![image](https://github.com/user-attachments/assets/143969a8-9ca3-4a92-a0ef-7bd9d23e1013)
+![image](https://github.com/user-attachments/assets/21c991d2-7ea8-47e7-89b2-c68b1b7010f6)
+- 테스트 파일 생성<br>
+![image](https://github.com/user-attachments/assets/bb34bd0c-f9f0-475f-9096-19b69c69067b)
+- 다른 pods에서도 확인 가능<br>
+![image](https://github.com/user-attachments/assets/f0d3568b-b87e-4287-b541-8388590afd2f)
+
 ### 무정지배포 - Rediness Probe
+- deployment.yaml 변경 후 재배포
+![image](https://github.com/user-attachments/assets/8a3ca8ff-1925-465f-bda0-91578f12e1df)
+
 ### 서비스 메쉬 응용 - Mesh
-### 통합 모니터링 - Loggregation/Monitoring
+
+### 통합 모니터링 - Monitoring
+- 프로메테우스 접속
+![image](https://github.com/user-attachments/assets/5c11e1d1-1561-41cf-9fcb-762dd744c168)
+
