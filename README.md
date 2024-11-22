@@ -98,11 +98,17 @@
 - 다른 pods에서도 확인 가능<br>
 ![image](https://github.com/user-attachments/assets/f0d3568b-b87e-4287-b541-8388590afd2f)
 
-### 무정지배포 - Rediness Probe
-- deployment.yaml 변경 후 재배포
+### 무정지배포 - Readiness Probe
+- Readiness probe: 컨테이너가 비정상일 경우에는 해당 Pod를 사용할 수 없음으로 표시하고 서비스에서 제외
+- deployment.yaml 변경 후 재배포<br>
 ![image](https://github.com/user-attachments/assets/8a3ca8ff-1925-465f-bda0-91578f12e1df)
 
 ### 서비스 메쉬 응용 - Mesh
+- Istio 사이드카 주입 활성화<br>
+![image](https://github.com/user-attachments/assets/86fca42e-fabf-416b-96a5-26071d0e5b70)
+-> default 네임스페이스에 배포된 모든 Pod에 자동으로 Istio 사이드카 프록시가 추가
+- Istion사이드카 프록시 주입됐는지 확인<br>
+![image](https://github.com/user-attachments/assets/d36790c6-73cf-46ed-b0fe-d0eef2329460)
 
 ### 통합 모니터링 - Monitoring
 - 프로메테우스 접속
