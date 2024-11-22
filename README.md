@@ -44,8 +44,8 @@
 ![image](https://github.com/user-attachments/assets/4f8aa680-553c-45b7-80b8-62bdb4ba2a3b)
 ![image](https://github.com/user-attachments/assets/f7a331af-dd7a-403f-be1e-6e5d6f50ef2a)
 ![image](https://github.com/user-attachments/assets/2f335953-6f9e-4518-8df4-1adc3f34eeb4)
--> 수강인원이 올라가지 않음
--> status update
+--> 수강인원이 올라가지 않음
+--> status update
   
 ### 단일 진입점 - Gateway
 - 8088 port로 Gateway를 통해 서비스 호출<br>
@@ -112,7 +112,7 @@
 ### 서비스 메쉬 응용 - Mesh
 - Istio 사이드카 주입 활성화<br>
 ![image](https://github.com/user-attachments/assets/86fca42e-fabf-416b-96a5-26071d0e5b70)
--> default 네임스페이스에 배포된 모든 Pod에 자동으로 Istio 사이드카 프록시가 추가
+--> default 네임스페이스에 배포된 모든 Pod에 자동으로 Istio 사이드카 프록시가 추가
 - Istion사이드카 프록시 주입됐는지 확인<br>
 ![image](https://github.com/user-attachments/assets/d36790c6-73cf-46ed-b0fe-d0eef2329460)
 
