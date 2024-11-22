@@ -24,18 +24,18 @@
 
 ## MSA 개발 💻
 ### 분산트랜잭션-Saga
-- classId=2인 yogaClass 생성. 최대 예약 인원 2명.
+- classId=2인 yogaClass 생성. 최대 예약 인원 2명.<br>
 ![image](https://github.com/user-attachments/assets/8b2ad392-1521-4b4e-a665-4a551b90d55b)
 
-- userId=11이 classId=2인 yogaClass 예약
+- userId=11이 classId=2인 yogaClass 예약<br>
 ![image](https://github.com/user-attachments/assets/a1d26ed2-9cad-4915-a699-b48e6616de9f)
 ![image](https://github.com/user-attachments/assets/1b5ec3e6-3d5f-4d74-987e-7425ad173cd7)
 
-- userId=12이 classId=2인 yogaClass 예약
+- userId=12이 classId=2인 yogaClass 예약<br>
 ![image](https://github.com/user-attachments/assets/423f4837-5f47-4e35-b4cf-f21d361bfcb2)
 
-- Kafaka를 통해 이벤트를 Pub/Sub
--![image](https://github.com/user-attachments/assets/8e64552e-b8a1-4baf-b81d-68431727dae8)
+- Kafaka를 통해 이벤트를 Pub/Sub<br>
+![image](https://github.com/user-attachments/assets/8e64552e-b8a1-4baf-b81d-68431727dae8)
 
 ### 보상처리 - Compensation
 - userId=13이 classId=2인 yogaClass 예약 
@@ -46,7 +46,7 @@
 -> status update
   
 ### 단일 진입점 - Gateway
-- 8088 port로 Gateway를 통해 서비스 호출
+- 8088 port로 Gateway를 통해 서비스 호출<br>
 ![image](https://github.com/user-attachments/assets/158721b6-ebdf-4426-9fa4-cea929e379c6)
 
 ### 분산 데이터 프로젝션 - CQRS
@@ -62,7 +62,7 @@
 - Jenkinsfile 변경
 ![image](https://github.com/user-attachments/assets/d942c42f-d1b5-4884-b33c-d503535c7de6)
 
-- Webhook 설정
+- Webhook 설정<br>
 ![image](https://github.com/user-attachments/assets/11dc48cd-f862-4a7a-a212-5dd307c1346b)
 
 - github에서 push 할 경우, trigger되어 Jenkins를 통해 배포
@@ -72,7 +72,7 @@
 
 ## 컨테이너 🚦
 ### 컨테이너 자동확장 - HPA
-- AutoScale 설정
+- AutoScale 설정<br>
 ![image](https://github.com/user-attachments/assets/c41fd4df-a7be-4787-9c46-710fc67e48b3)
 - 부하테스트<br>
 ![image](https://github.com/user-attachments/assets/7ad7f293-bacb-4e60-8da4-e8bc33c660a6)
@@ -84,9 +84,9 @@
 ### 컨테이너로부터 환경분리 - ConfigMap
 - Config Map 생성<br>
 ![image](https://github.com/user-attachments/assets/4bca90f3-feea-4b62-90aa-c73bc78d37e5)
-- deployment.yaml 변경
+- deployment.yaml 변경<br>
 ![image](https://github.com/user-attachments/assets/eb68a8b5-ae58-470d-8e0d-5eb4d46b7f0b)
-- 환경변수 확인
+- 환경변수 확인<br>
 ![image](https://github.com/user-attachments/assets/dbb401ec-f9b7-4a98-b301-27638463db86)
 
 ### 클라우드스토리지 활용 - PVC
