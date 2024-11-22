@@ -102,8 +102,12 @@
 
 ### 무정지배포 - Readiness Probe
 - Readiness probe: 컨테이너가 비정상일 경우에는 해당 Pod를 사용할 수 없음으로 표시하고 서비스에서 제외
+- 무정지배포 적용 전<br>
+![image](https://github.com/user-attachments/assets/53ea9f6e-f62c-4fde-a1c0-cb2a65fcba01)
 - deployment.yaml 변경 후 재배포<br>
-![image](https://github.com/user-attachments/assets/8a3ca8ff-1925-465f-bda0-91578f12e1df)
+![image](https://github.com/user-attachments/assets/bdf8a9ab-0c97-473d-aef7-a6119960ba3d)
+- 무정지배포 적용 후<br>
+![image](https://github.com/user-attachments/assets/9c411118-9bd8-4432-becc-d09c81b0c1c9)
 
 ### 서비스 메쉬 응용 - Mesh
 - Istio 사이드카 주입 활성화<br>
