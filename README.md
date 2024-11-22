@@ -18,7 +18,9 @@
 
 ## MSA 아키텍처 구성도 🎀
 ![image](https://github.com/user-attachments/assets/61d2eb90-d154-4506-8fce-fe066591e5ef)
-
+- Istio: Service Mesh. 각 마이크로서비스의 네트워크 트래픽을 중앙에서 제어하고 관리합니다.
+- Microservices: Reservation, YogaClass, Notification, MyPage
+- Kafka: 메시지 브로커. 
 ## 이벤트 스토밍 ✨
 ![image](https://github.com/user-attachments/assets/10deb8b8-5952-4b53-8fbf-ee62253f77e6)
 
